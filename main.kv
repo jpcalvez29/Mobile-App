@@ -1,0 +1,1379 @@
+#:import NoTransition kivy.uix.screenmanager.NoTransition
+
+NavigationLayout:
+    MDNavigationDrawer:
+        drawer_logo: "image.jpg"
+        NavigationDrawerSubheader:
+            text: "Lets Get Fit"
+        NavigationDrawerIconButton:
+            text: "Menu"
+            on_release:
+                screen_manager.current = "Screen1"
+        NavigationDrawerIconButton:
+            text: "Beginner"
+            on_release:
+                screen_manager.current = "Screen2"
+        NavigationDrawerIconButton:
+            text: "Intermediate"
+            on_release:
+                screen_manager.current = "Screen3"
+        NavigationDrawerIconButton:
+            text: "Advanced"
+            on_release:
+                screen_manager.current = "Screen4"
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            title: "30 Day Fitness"
+            elevation:10
+            md_bg_color: app.theme_cls.primary_color
+            left_action_items: [['menu', lambda x: root.toggle_nav_drawer()]]
+
+        ScreenManager:
+            id: screen_manager
+            transition: NoTransition()
+
+            Screen:
+                name: "Screen1"
+                orientation: 'vertical'
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'image2.jpg'
+
+            Screen:
+                name: "Screen2"
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'image2.jpg'
+                FloatLayout:
+                    orientation: 'vertical'
+                    MDRaisedButton:
+                        size_hint: .8, 0.15
+                        pos_hint: {"x":.1, "top":.9}
+                        text: "ABS BEGINNER"
+                        md_bg_color: app.theme_cls.primary_color
+                        on_release:
+                            screen_manager.current = "AbsBeg"
+
+                    MDRaisedButton:
+                        size_hint: .8, 0.15
+			            pos_hint: {"x":.1, "top":.6}
+			            text: "ARMS BEGINNER"
+                        md_bg_color: app.theme_cls.primary_color
+                        on_release:
+                            screen_manager.current = "ArmsBeg"
+
+
+                    MDRaisedButton:
+                        size_hint: .8, 0.15
+			            pos_hint: {"x":.1, "top":.3}
+			            text: "LEGS BEGINNER"
+                        md_bg_color: app.theme_cls.primary_color
+                        on_release:
+                            screen_manager.current = "LegsBeg"
+            Screen:
+                name: "AbsBeg"
+                ScrollView:
+                    MDList:
+                        TwoLineAvatarIconListItem:
+                            text: "ABS BEGINNER"
+                            secondary_text: "20 mins| 16 workout"
+                            on_release:
+                                app.help_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text: "20s Jumping Jacks"
+                            on_release:
+                                app.jumping_jacks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Abdominal Crunches"
+                            on_release:
+                                app.abdominal_crunches_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Russian Twist"
+                            on_release:
+                                app.russian_twist_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Mountain Climber"
+                            on_release:
+                                app.mountain_climber_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Heel Touch"
+                            on_release:
+                                app.heel_touch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Leg Raises"
+                            on_release:
+                                app.leg_raises_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20s Plank"
+                            on_release:
+                                app.plank_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Abdominal Crunches"
+                            on_release:
+                                app.abdominal_crunches_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"32x Russian Twist"
+                            on_release:
+                                app.russian_twist_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Mountain Climber"
+                            on_release:
+                                app.mountain_climber_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Heel Touch"
+                            on_release:
+                                app.heel_touch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Leg Raises"
+                            on_release:
+                                app.leg_raises_mddialog()
+
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Cobra Stretch"
+                            on_release:
+                                app.cobra_stretch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Plank"
+                            on_release:
+                                app.plank_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Spine Lumbar Twist Stretch Left"
+                            on_release:
+                                app.spine_lumbar_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Spine Lumbar Twist Stretch Right"
+                            on_release:
+                                app.spine_lumbar_right_mddialog()
+
+
+
+
+            Screen:
+                name: "ArmsBeg"
+                ScrollView:
+                    MDList:
+                        TwoLineAvatarIconListItem:
+                            text: "ARMS BEGINNER"
+                            secondary_text: "20 mins| 19 workouts"
+
+                        OneLineAvatarIconListItem:
+                            text:"30x Arm Raises"
+                            on_release:
+                                app.arm_raises_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30x Side Arm Raise"
+                            on_release:
+                                app.side_arm_raises_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"10x Triceps Dip"
+                            on_release:
+                                app.triceps_dip_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Arm Circle Clockwise"
+                            on_release:
+                                app.arm_circle_clockwise_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Arm Circle Counterclockwise"
+                            on_release:
+                                app.arm_circle_counterclockwise_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"6x Diamond Push-Ups"
+                            on_release:
+                                app.diamond_pushup_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Jumping Jacks"
+                            on_release:
+                                app.jumping_jacks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16s Chest Press Pulse"
+                            on_release:
+                                app.chest_press_pulse_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"8x Leg Barbell Curl Left"
+                            on_release:
+                                app.barbell_curl_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"8x Leg Barbell Curl Right"
+                            on_release:
+                                app.barbell_curl_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"10x Diagonal Plank"
+                            on_release:
+                                app.diagonal_plank_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Punches"
+                            on_release:
+                                app.punches_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"10x Push-Ups"
+                            on_release:
+                                app.push_ups_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"8x Inchworms"
+                            on_release:
+                                app.inchworms_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Wall Push-Ups"
+                            on_release:
+                                app.wall_push_ups_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Triceps Stretch Left"
+                            on_release:
+                                app.triceps_stretch_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Triceps Stretch Right"
+                            on_release:
+                                app.triceps_stretch_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Standing Biceps Stretch Left"
+                            on_release:
+                                app.standing_bicep_stretchl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Standing Biceps Stretch Right"
+                            on_release:
+                                app.standing_bicep_stretchr_mddialog()
+
+
+            Screen:
+                name: "LegsBeg"
+                ScrollView:
+                    MDList:
+                        TwoLineAvatarIconListItem:
+                            text: "LEGS BEGINNER"
+                            secondary_text: "26 mins| 23 workouts"
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Side Hop"
+                            on_release:
+                                app.side_hop_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Squats"
+                            on_release:
+                                app.squats_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Squats"
+                            on_release:
+                                app.squats_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side-Lying Leg Lift Left"
+                            on_release:
+                                app.sidelying_legleft_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side-Lying Leg Lift Right"
+                            on_release:
+                                app.sidelying_legright_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side-Lying Leg Lift Left"
+                            on_release:
+                                app.sidelying_legleft_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side-Lying Leg Lift Right"
+                            on_release:
+                                app.sidelying_legright_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Backward Lunge"
+                            on_release:
+                                app.backward_lunge_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Backward Lunge"
+                            on_release:
+                                app.backward_lunge_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Donkey Kicks Left"
+                            on_release:
+                                app.donkey_kicks_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Donkey Kicks Right"
+                            on_release:
+                                app.donkey_kicks_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Donkey Kicks Left"
+                            on_release:
+                                app.donkey_kicks_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Donkey Kicks Right"
+                            on_release:
+                                app.donkey_kicks_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Left Quad Stretch With Wall"
+                            on_release:
+                                app.lquad_stretch_wall_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Right Quad Stretch With Wall"
+                            on_release:
+                                app.rquad_stretch_wall_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Knee To Chest Stretch Left"
+                            on_release:
+                                app.knee_chest_stretchl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Knee To Chest Stretch Right"
+                            on_release:
+                                app.knee_chest_stretchr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Wall Calf Raises"
+                            on_release:
+                                app.wall_calf_raises_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Wall Calf Raises"
+                            on_release:
+                                app.wall_calf_raises_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Sumo Squat Calf Raises With Wall"
+                            on_release:
+                                app.sumo_squat_calf_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Sumo Squat Calf Raises With Wall"
+                            on_release:
+                                app.sumo_squat_calf_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Calf Stretch Left"
+                            on_release:
+                                app.calf_stretch_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Calf Stretch Right"
+                            on_release:
+                                app.calf_stretch_right_mddialog()
+
+            Screen:
+                name: "Screen3"
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'image2.jpg'
+                FloatLayout:
+                    orientation: 'vertical'
+                    MDRaisedButton:
+                        size_hint: .8, 0.15
+                        pos_hint: {"x":.1, "top":.9}
+                        text: "ABS INTERMEDIATE"
+                        md_bg_color: app.theme_cls.primary_dark
+                        on_release:
+                            screen_manager.transition.direction = 'left'
+                            screen_manager.current = "AbsInt"
+
+                    MDRaisedButton:
+                        size_hint: .8, 0.15
+			            pos_hint: {"x":.1, "top":.6}
+			            text: "ARMS INTERMEDIATE"
+                        md_bg_color: app.theme_cls.primary_dark
+                        on_release:
+                            screen_manager.transition.direction = 'left'
+                            screen_manager.current = "ArmsInt"
+
+
+                    MDRaisedButton:
+                        size_hint: .8, 0.15
+			            pos_hint: {"x":.1, "top":.3}
+			            text: "LEGS INTERMEDIATE"
+                        md_bg_color: app.theme_cls.primary_dark
+                        on_release:
+                            screen_manager.transition.direction = 'left'
+                            screen_manager.current = "LegsInt"
+
+            Screen:
+                name: "AbsInt"
+                ScrollView:
+                    MDList:
+                        TwoLineAvatarIconListItem:
+                            text: "ABS INTERMEDIATE"
+                            secondary_text: "29 mins| 21 workout|"
+
+                        OneLineAvatarIconListItem:
+                            text: "30s Jumping Jacks"
+                            on_release:
+                                app.jumping_jacks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"26x Heel Touch"
+                            on_release:
+                                app.heel_touch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Crossover Crunch"
+                            on_release:
+                                app.crossover_crunch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Mountain Climber"
+                            on_release:
+                                app.mountain_climber_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Bridges Left"
+                            on_release:
+                                app.side_bridges_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Bridges Right"
+                            on_release:
+                                app.side_bridges_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Butt Bridge"
+                            on_release:
+                                app.butt_bridge_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Bicycle Crunches"
+                            on_release:
+                                app.bicycle_crunches_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x V-Up"
+                            on_release:
+                                app.vup_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"26x Heel Touch"
+                            on_release:
+                                app.heel_touch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Abdominal Crunches"
+                            on_release:
+                                app.abdominal_crunches_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20s Plank"
+                            on_release:
+                                app.plank_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Crossover Crunch"
+                            on_release:
+                                app.crossover_crunch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Leg Raises"
+                            on_release:
+                                app.leg_raises_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"18x Bicycle Crunches"
+                            on_release:
+                                app.bicycle_crunches_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Push-Up And Rotation"
+                            on_release:
+                                app.pushup_rotation_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20s Side Plank Left"
+                            on_release:
+                                app.side_plank_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20s Side Plank Right"
+                            on_release:
+                                app.side_plank_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Cobra Stretch"
+                            on_release:
+                                app.cobra_stretch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Spine Lumbar Twist Stretch Left"
+                            on_release:
+                                app.spine_lumbar_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Spine Lumbar Twist Stretch Right"
+                            on_release:
+                                app.spine_lumbar_right_mddialog()
+
+            Screen:
+                name: "ArmsInt"
+                ScrollView:
+                    MDList:
+                        TwoLineAvatarIconListItem:
+                            text: "ARMS INTERMEDIATE"
+                            secondary_text: "26 mins| 25 workout"
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Arm Circle Clockwise"
+                            on_release:
+                                app.arm_circle_clockwise_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Arm Circle Counterclockwise"
+                            on_release:
+                                app.arm_circle_counterclockwise_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Floor Triceps Dips"
+                            on_release:
+                                app.floor_triceps_dips_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Military Push Ups"
+                            on_release:
+                                app.military_pushups_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Alternating Hooks"
+                            on_release:
+                                app.alternating_hooks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Push-Up And Rotation"
+                            on_release:
+                                app.pushup_rotation_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Leg Barbell Curl Left"
+                            on_release:
+                                app.barbell_curl_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Leg Barbell Curl Right"
+                            on_release:
+                                app.barbell_curl_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Floor Triceps Dips"
+                            on_release:
+                                app.floor_triceps_dips_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"10x Military Push Ups"
+                            on_release:
+                                app.military_pushups_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Alternating Hooks"
+                            on_release:
+                                app.alternating_hooks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"10x Push-Up And Rotation"
+                            on_release:
+                                app.pushup_rotation_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"10x Leg Barbell Curl Left"
+                            on_release:
+                                app.barbell_curl_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"10x Leg Barbell Curl Right"
+                            on_release:
+                                app.barbell_curl_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Skipping Without Rope"
+                            on_release:
+                                app.skipping_without_rope_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Push-Ups"
+                            on_release:
+                                app.push_ups_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"10x Burpees"
+                            on_release:
+                                app.burpees_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Arm Scissors"
+                            on_release:
+                                app.arm_scissors_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Skipping Without Rope"
+                            on_release:
+                                app.skipping_without_rope_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Push-Ups"
+                            on_release:
+                                app.push_ups_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"8x Burpees"
+                            on_release:
+                                app.burpees_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Triceps Stretch Left"
+                            on_release:
+                                app.triceps_stretch_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Triceps Stretch Right"
+                            on_release:
+                                app.triceps_stretch_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Standing Biceps Stretch Left"
+                            on_release:
+                                app.standing_bicep_stretchl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Standing Biceps Stretch Right"
+                            on_release:
+                                app.standing_bicep_stretchr_mddialog()
+
+            Screen:
+                name: "LegsInt"
+                ScrollView:
+                    MDList:
+                        TwoLineAvatarIconListItem:
+                            text: "LEGS INTERMEDIATE"
+                            secondary_text: "41 mins| 36 workout"
+
+                        OneLineAvatarIconListItem:
+                            text: "30s Jumping Jacks"
+                            on_release:
+                                app.jumping_jacks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Squats"
+                            on_release:
+                                app.squats_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Squats"
+                            on_release:
+                                app.squats_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Squats"
+                            on_release:
+                                app.squats_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Fire Hydrant Left"
+                            on_release:
+                                app.fire_hydrant_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Fire Hydrant Right"
+                            on_release:
+                                app.fire_hydrant_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Fire Hydrant Left"
+                            on_release:
+                                app.fire_hydrant_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Fire Hydrant Right"
+                            on_release:
+                                app.fire_hydrant_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Fire Hydrant Left"
+                            on_release:
+                                app.fire_hydrant_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Fire Hydrant Right"
+                            on_release:
+                                app.fire_hydrant_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Lunges"
+                            on_release:
+                                app.lunges_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Lunges"
+                            on_release:
+                                app.lunges_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Leg Circle Left"
+                            on_release:
+                                app.side_leg_circlel_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Leg Circle Right"
+                            on_release:
+                                app.side_leg_circler_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Leg Circle Left"
+                            on_release:
+                                app.side_leg_circlel_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Leg Circle Right"
+                            on_release:
+                                app.side_leg_circler_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Sumo Squat"
+                            on_release:
+                                app.sumo_squat_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Sumo Squat"
+                            on_release:
+                                app.sumo_squat_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Sumo Squat"
+                            on_release:
+                                app.sumo_squat_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Reverse Flutter Kicks"
+                            on_release:
+                                app.reverse_flutter_kicks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Reverse Flutter Kicks"
+                            on_release:
+                                app.reverse_flutter_kicks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Reverse Flutter Kicks"
+                            on_release:
+                                app.reverse_flutter_kicks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Wall Sit"
+                            on_release:
+                                app.wall_sit_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Left Quad Stretch With Wall"
+                            on_release:
+                                app.lquad_stretch_wall_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Right Quad Stretch With Wall"
+                            on_release:
+                                app.rquad_stretch_wall_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Knee To Chest Stretch Left"
+                            on_release:
+                                app.knee_chest_stretchl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Knee To Chest Stretch Right"
+                            on_release:
+                                app.knee_chest_stretchr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Calf Raise With Splayed Foot"
+                            on_release:
+                                app.calf_raise_splayed_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Calf Raise With Splayed Foot"
+                            on_release:
+                                app.calf_raise_splayed_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Calf Raise With Splayed Foot"
+                            on_release:
+                                app.calf_raise_splayed_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Single Leg Calf Hop Left"
+                            on_release:
+                                app.leg_calf_hopl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Single Leg Calf Hop Right"
+                            on_release:
+                                app.leg_calf_hopr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Single Leg Calf Hop Left"
+                            on_release:
+                                app.leg_calf_hopl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Single Leg Calf Hop Right"
+                            on_release:
+                                app.leg_calf_hopr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Calf Stretch Left"
+                            on_release:
+                                app.calf_stretch_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Calf Stretch Right"
+                            on_release:
+                                app.calf_stretch_right_mddialog()
+            Screen:
+                name: "Screen4"
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'image2.jpg'
+                FloatLayout:
+                    orientation: 'vertical'
+                    MDRaisedButton:
+                        size_hint: .8, 0.15
+                        pos_hint: {"x":.1, "top":.9}
+                        text: "ABS ADVANCED"
+                        md_bg_color: app.theme_cls.primary_color
+                        on_release:
+                            screen_manager.transition.direction = 'left'
+                            screen_manager.current = "AbsAdv"
+
+                    MDRaisedButton:
+                        size_hint: .8, 0.15
+			            pos_hint: {"x":.1, "top":.6}
+			            text: "ARMS ADVANCED"
+                        md_bg_color: app.theme_cls.primary_color
+                        on_release:
+                            screen_manager.transition.direction = 'left'
+                            screen_manager.current = "ArmsAdv"
+
+
+                    MDRaisedButton:
+                        size_hint: .8, 0.15
+			            pos_hint: {"x":.1, "top":.3}
+			            text: "LEGS ADVANCED"
+                        md_bg_color: app.theme_cls.primary_color
+                        on_release:
+                            screen_manager.transition.direction = 'left'
+                            screen_manager.current = "LegsAdv"
+
+            Screen:
+                name: "AbsAdv"
+                ScrollView:
+                    MDList:
+                        TwoLineAvatarIconListItem:
+                            text: "ABS ADVANCED"
+                            secondary_text: "36 mins| 21 workout"
+
+                        OneLineAvatarIconListItem:
+                            text: "30s Jumping Jacks"
+                            on_release:
+                                app.jumping_jacks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Sit-Ups"
+                            on_release:
+                                app.sit_ups_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Side Bridges Left"
+                            on_release:
+                                app.side_bridges_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20x Side Bridges Right"
+                            on_release:
+                                app.side_bridges_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30x Abdominal Crunches"
+                            on_release:
+                                app.abdominal_crunches_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"24x Bicycle Crunches"
+                            on_release:
+                                app.bicycle_crunches_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20s Side Plank Left"
+                            on_release:
+                                app.side_plank_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"20s Side Plank Right"
+                            on_release:
+                                app.side_plank_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"18x V-Up"
+                            on_release:
+                                app.vup_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"24x Push-Up And Rotation"
+                            on_release:
+                                app.pushup_rotation_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"48x Russian Twist"
+                            on_release:
+                                app.russian_twist_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"28x Abdominal Crunches"
+                            on_release:
+                                app.abdominal_crunches_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30x Butt Bridge"
+                            on_release:
+                                app.butt_bridge_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"34x Heel Touch"
+                            on_release:
+                                app.heel_touch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30x Mountain Climber"
+                            on_release:
+                                app.mountain_climber_mddialog()
+
+
+                        OneLineAvatarIconListItem:
+                            text:"24x Crossover Crunch"
+                            on_release:
+                                app.crossover_crunch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"1m  Plank"
+                            on_release:
+                                app.plank_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x V-Up"
+                            on_release:
+                                app.vup_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Cobra Stretch"
+                            on_release:
+                                app.cobra_stretch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Spine Lumbar Twist Stretch Left"
+                            on_release:
+                                app.spine_lumbar_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Spine Lumbar Twist Stretch Right"
+                            on_release:
+                                app.spine_lumbar_right_mddialog()
+
+            Screen:
+                name: "ArmsAdv"
+                ScrollView:
+                    MDList:
+                        TwoLineAvatarIconListItem:
+                            text: "ARMS ADVANCED"
+                            secondary_text: "32 mins| 28 workouts"
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Arm Circle Clockwise"
+                            on_release:
+                                app.arm_circle_clockwise_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Skipping Without Rope"
+                            on_release:
+                                app.skipping_without_rope_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Leg Barbell Curl Left"
+                            on_release:
+                                app.barbell_curl_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Leg Barbell Curl Right"
+                            on_release:
+                                app.barbell_curl_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Burpees"
+                            on_release:
+                                app.burpees_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Arm Curls Crunch Left"
+                            on_release:
+                                app.arm_curls_crunchl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Arm Curls Crunch Right"
+                            on_release:
+                                app.arm_curls_crunchr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"18x Floor Triceps Dips"
+                            on_release:
+                                app.floor_triceps_dips_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Alternating Hooks"
+                            on_release:
+                                app.alternating_hooks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Military Push Ups"
+                            on_release:
+                                app.military_pushups_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Shoulder Gator"
+                            on_release:
+                                app.shoulder_gator_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Floor Triceps Dips"
+                            on_release:
+                                app.floor_triceps_dips_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Alternating Hooks"
+                            on_release:
+                                app.alternating_hooks_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Burpees"
+                            on_release:
+                                app.burpees_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Arm Curls Crunch Left"
+                            on_release:
+                                app.arm_curls_crunchl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Arm Curls Crunch Right"
+                            on_release:
+                                app.arm_curls_crunchr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Military Push Ups"
+                            on_release:
+                                app.military_pushups_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Shoulder Gator"
+                            on_release:
+                                app.shoulder_gator_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"8x Door Way Curls Left"
+                            on_release:
+                                app.door_way_curlsl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"8x Door Way Curls Right"
+                            on_release:
+                                app.door_way_curlsr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Modified Push-Up Low Hold"
+                            on_release:
+                                app.modified_push_up_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"18x Chest Press Pulse"
+                            on_release:
+                                app.chest_press_pulse_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Push-Up And Rotation"
+                            on_release:
+                                app.pushup_rotation_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Triceps Stretch Left"
+                            on_release:
+                                app.triceps_stretch_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Triceps Stretch Right"
+                            on_release:
+                                app.triceps_stretch_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Standing Biceps Stretch Left"
+                            on_release:
+                                app.standing_bicep_stretchl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Standing Biceps Stretch Right"
+                            on_release:
+                                app.standing_bicep_stretchr_mddialog()
+
+            Screen:
+                name: "LegsAdv"
+                ScrollView:
+                    MDList:
+                        TwoLineAvatarIconListItem:
+                            text: "LEGS ADVANCED"
+                            secondary_text: "53 mins| 43 workout"
+
+                        OneLineAvatarIconListItem:
+                            text:"10x Burpees"
+                            on_release:
+                                app.burpees_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Squats"
+                            on_release:
+                                app.squats_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Squats"
+                            on_release:
+                                app.squats_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Squats"
+                            on_release:
+                                app.squats_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Bottom Leg Lift Left"
+                            on_release:
+                                app.bottom_leg_liftl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Bottom Leg Lift Right"
+                            on_release:
+                                app.bottom_leg_liftr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Bottom Leg Lift Left"
+                            on_release:
+                                app.bottom_leg_liftl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Bottom Leg Lift Right"
+                            on_release:
+                                app.bottom_leg_liftr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Bottom Leg Lift Left"
+                            on_release:
+                                app.bottom_leg_liftl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Bottom Leg Lift Right"
+                            on_release:
+                                app.bottom_leg_liftr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Curtsy Lunges"
+                            on_release:
+                                app.curtsy_lunges_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Curtsy Lunges"
+                            on_release:
+                                app.curtsy_lunges_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Curtsy Lunges"
+                            on_release:
+                                app.curtsy_lunges_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Leg Circle Left"
+                            on_release:
+                                app.sideleg_circle_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Leg Circle Right"
+                            on_release:
+                                app.sideleg_circle_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Leg Circle Left"
+                            on_release:
+                                app.sideleg_circle_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Leg Circle Right"
+                            on_release:
+                                app.sideleg_circle_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Leg Circle Left"
+                            on_release:
+                                app.sideleg_circle_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Side Leg Circle Right"
+                            on_release:
+                                app.sideleg_circle_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"14x Jumping Squats"
+                            on_release:
+                                app.jumping_squats_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Glute Kick Back Left"
+                            on_release:
+                                app.glute_kick_backl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Glute Kick Back Right"
+                            on_release:
+                                app.glute_kick_backr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Glute Kick Back Left"
+                            on_release:
+                                app.glute_kick_backl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Glute Kick Back Right"
+                            on_release:
+                                app.glute_kick_backr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Glute Kick Back Left"
+                            on_release:
+                                app.glute_kick_backl_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"12x Glute Kick Back Right"
+                            on_release:
+                                app.glute_kick_backr_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"40s Wall Sit"
+                            on_release:
+                                app.wall_sit_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Left Quad Stretch With Wall"
+                            on_release:
+                                app.lquad_stretch_wall_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Right Quad Stretch With Wall"
+                            on_release:
+                                app.rquad_stretch_wall_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Flying Butterfly Stretch"
+                            on_release:
+                                app.flying_butterfly_stretch_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Leaning Stretcher Raises"
+                            on_release:
+                                app.leaning_stretcher_raises_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Leaning Stretcher Raises"
+                            on_release:
+                                app.leaning_stretcher_raises_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Leaning Stretcher Raises"
+                            on_release:
+                                app.leaning_stretcher_raises_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Wall Resisting Single Leg Calf Raise Left"
+                            on_release:
+                                app.wrslcr_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Wall Resisting Single Leg Calf Raise Right"
+                            on_release:
+                                app.wrslcr_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Wall Resisting Single Leg Calf Raise Left"
+                            on_release:
+                                app.wrslcr_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Wall Resisting Single Leg Calf Raise Right"
+                            on_release:
+                                app.wrslcr_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Wall Resisting Single Leg Calf Raise Left"
+                            on_release:
+                                app.wrslcr_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"16x Wall Resisting Single Leg Calf Raise Right"
+                            on_release:
+                                app.wrslcr_right_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Calf Stretch Left"
+                            on_release:
+                                app.calf_stretch_left_mddialog()
+
+                        OneLineAvatarIconListItem:
+                            text:"30s Calf Stretch Right"
+                            on_release:
+                                app.calf_stretch_right_mddialog()
+
+

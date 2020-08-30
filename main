@@ -1,0 +1,685 @@
+from kivy.app import App
+from kivy.core.window import Window
+from kivymd.theming import ThemeManager
+from kivymd.uix.dialog import MDDialog
+Window.size = (300, 500)
+
+# (kivymd 0.100.1)
+
+
+class MainApp(App):
+    theme_cls = ThemeManager()
+
+    def jumping_jacks_mddialog(self):
+        my_dialog = MDDialog(title="Jumping Jacks",
+                             text="Start with your feet together and your arms " +
+                                  "by your sides, then jump up with your feet apart " +
+                                  "and your hands overhead. Return to the starting " +
+                                  "position then do the next rep", size_hint=[.6, .5],
+                             auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def abdominal_crunches_mddialog(self):
+        my_dialog = MDDialog(title="Abdominal Crunches",
+                             text="Lie on your back with your knees bend and your arms " +
+                                  "stretched forward. Then lift your upper body off the " +
+                                  "floor. Hold it for a few second and slowly return.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def russian_twist_mddialog(self):
+        my_dialog = MDDialog(title="Russian Twist",
+                             text="Sit on the floor with your knees bent, feet lifted a " +
+                                  "little bit and back tilted background. Then hold " +
+                                  "your hands together and twist from side to side.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def mountain_climber_mddialog(self):
+        my_dialog = MDDialog(title="Mountain Climber",
+                             text="Start in the push-up position. Bend your right knee " +
+                                  "towards your chest and keep your left leg straight then " +
+                                  "quickly switch from one leg to the other.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def heel_touch_mddialog(self):
+        my_dialog = MDDialog(title="Heel Touch",
+                             text="Lie on the ground with your legs bent and your arms by your " +
+                                  "sides. Slightly lift your upper body off the floor and make " +
+                                  "your hands alternately reach your heels.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def leg_raises_mddialog(self):
+        my_dialog = MDDialog(title="Leg Raises",
+                             text="Lie down on your back, and put your hands beneath your hips for " +
+                                  "support. Then lift your legs up until they form a right angle " +
+                                  "with the floor. Slowly bring your legs back down and repeat the exercise",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def plank_mddialog(self):
+        my_dialog = MDDialog(title="Plank",
+                             text="Lie on the floor with your toes and forearms on the ground. " +
+                                  "Keep your body straight and hold this position as long as you can.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def cobra_stretch_mddialog(self):
+        my_dialog = MDDialog(title="Cobra Stretch",
+                             text="Lie down on your Stomach and bend your elbows with your hands " +
+                                  "beneath your shoulders. Then push your chest up off the ground " +
+                                  "as far as possible. Hold this position for seconds.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def spine_lumbar_left_mddialog(self):
+        my_dialog = MDDialog(title="Spine Lumbar Twist Stretch Left",
+                             text="Lie on your back with your legs extended. Lift your left " +
+                                  "leg up and use your right hand to pull your left knee to the " +
+                                  "right, but keep your other arm extended to the side on the floor.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def spine_lumbar_right_mddialog(self):
+        my_dialog = MDDialog(title="Spine Lumbar Twist Stretch Right",
+                             text="Lie on your back with your legs extended. Lift your right " +
+                                  "leg up and use your left hand to pull your right knee to the " +
+                                  "left, but keep your other arm extended to the side on the floor.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def arm_raises_mddialog(self):
+        my_dialog = MDDialog(title="Arm Raises",
+                             text="Stand on the floor with your arms extended straight forward " +
+                                  "at shoulder height. Raise your arms above your head. Return to " +
+                                  "the start position and repeat.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def side_arm_raises_mddialog(self):
+        my_dialog = MDDialog(title="Side Arm Raise",
+                             text="Stand with your feet shoulder wigth apart. Raise your " +
+                                  "arms to the sides at shoulder height, then put them down. " +
+                                  "Repeat the exercise. Keep your arms straight duing the exercise..",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def triceps_dip_mddialog(self):
+        my_dialog = MDDialog(title="Triceps Dip",
+                             text="For the start position, sit on the chair, Then move your " +
+                                  "hip off the chair with your hands holding the edge of the " +
+                                  "chair. Slowly bend and stretch your arms to make your body go up and down.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def arm_circle_clockwise_mddialog(self):
+        my_dialog = MDDialog(title="Arm Circle Clockwise",
+                             text="Stand on the floor with your arms extended straight out to " +
+                                  "he sides at shoulder height. Move your arms clockwise in circles " +
+                                  "fast. Try to do it as fast as you can. It is a great exercise " +
+                                  "for the deltoid muscle.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def arm_circle_counterclockwise_mddialog(self):
+        my_dialog = MDDialog(title="Arm Circle Counterclockwise",
+                             text="Stand on the floor with your arms extended straight out to " +
+                                  "he sides at shoulder height. Move your arms counterclockwise in circles " +
+                                  "fast. Try to do it as fast as you can. It is a great exercise " +
+                                  "for the deltoid muscle.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def diamond_pushup_mddialog(self):
+        my_dialog = MDDialog(title="Diamond Push-Ups",
+                             text="Start in the push-up position. Make diamond shape with your " +
+                                  "forefingers and thumbs together under your chest.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def chest_press_pulse_mddialog(self):
+        my_dialog = MDDialog(title="Chest Press Pulse",
+                             text="Hold your forearms together at shoulder height and bend " +
+                                  "your elbows with your hands to make a n 'L' shape.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def barbell_curl_left_mddialog(self):
+        my_dialog = MDDialog(title="Leg Barbell Curl Left",
+                             text="Stand against a wall. Lift your right leg up, lean forward " +
+                                  "and grab underneath your right angkle with your left hand. " +
+                                  "Bring the ankle up towards the shoulder as much as you can, then lower it.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def barbell_curl_right_mddialog(self):
+        my_dialog = MDDialog(title="Leg Barbell Curl Right",
+                             text="Stand against a wall. Lift your left leg up, lean forward " +
+                                  "and grab underneath your left angkle with your right hand. " +
+                                  "Bring the ankle up towards the shoulder as much as you can, then lower it.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def diagonal_plank_mddialog(self):
+        my_dialog = MDDialog(title="Diagonal Plank",
+                             text="Start in the straight arm plank position. Lift your right " +
+                                  "arm and left leg until they are parallel with the ground.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def punches_mddialog(self):
+        my_dialog = MDDialog(title="Punches",
+                             text="Stand with one of your legs forward and knee bent slightly. " +
+                                  "Bend your elbows and clench your fists in front of the face. " +
+                                  "Extend one arm forward with the palm facing the floor. Take the " +
+                                  "arm back and repeat with the other arm.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def push_ups_mddialog(self):
+        my_dialog = MDDialog(title="Push-Ups",
+                             text="Lay prone on the ground with arms supporting your body. Keep your " +
+                                  "body straight while raising and lowering your body with your arms.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def inchworms_mddialog(self):
+        my_dialog = MDDialog(title="Inchworms",
+                             text="Start with your feet shoulder width apart. Bend your body and walk " +
+                                  "your hands in front of hands back. Repeat the excercise.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def wall_push_ups_mddialog(self):
+        my_dialog = MDDialog(title="Wall Push-Ups",
+                             text="Stand in front of a wall one big step away from it. Then put your " +
+                                  "hands out straight towards the wall and lean againts it. Lift your " +
+                                  "heels Slowly bend your elbow and press your upper body towards the wall.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def triceps_stretch_left_mddialog(self):
+        my_dialog = MDDialog(title="Triceps Stretch Left",
+                             text="Put your left hand on your back, use your right hand to grab your " +
+                                  "left elbow and gently pull it.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def triceps_stretch_right_mddialog(self):
+        my_dialog = MDDialog(title="Triceps Stretch Right",
+                             text="Put your right hand on your back, use your left hand to grab your " +
+                                  "right elbow and gently pull it.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def standing_bicep_stretchl_mddialog(self):
+        my_dialog = MDDialog(title="Standing Bicep Stretch Left",
+                             text="Stand with your left arm close to a wall. Extend your arm and put " +
+                                  "your left hand on the wall, then gently turn your body to the right.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def standing_bicep_stretchr_mddialog(self):
+        my_dialog = MDDialog(title="Standing Bicep Stretch Right",
+                             text="Stand with your right arm close to a wall. Extend your arm and put " +
+                                  "your right hand on the wall, then gently turn your body to the left.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def side_hop_mddialog(self):
+        my_dialog = MDDialog(title="Side Hop",
+                             text="Stand on the floor, put your hands in front of you and hop from side to side.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def squats_mddialog(self):
+        my_dialog = MDDialog(title="Squats",
+                             text="Stand with your feet shoulder width apartand your arms stretch " +
+                                  "forward, then lower your body until your thighs are parallel with the floor.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def sidelying_legleft_mddialog(self):
+        my_dialog = MDDialog(title="Side-Lying Leg Lift Left",
+                             text="Lie down on your side with your head rested on your right arm. " +
+                                  "Lift your upper leg up and return to the start position.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def sidelying_legright_mddialog(self):
+        my_dialog = MDDialog(title="Side-Lying Leg Lift Left",
+                             text="Lie down on your side with your head rested on your left arm. " +
+                                  "Lift your upper leg up and return to the start position.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def backward_lunge_mddialog(self):
+        my_dialog = MDDialog(title="Backward Lunge",
+                             text="Stand with your feet shoulder width apart and your hands on your " +
+                                  "hips. Step a big step background with your right leg and lower " +
+                                  "your body until your left high is parallel to the floor.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def donkey_kicks_left_mddialog(self):
+        my_dialog = MDDialog(title="Donkey Kicks Left",
+                             text="Start on all fours with your knees under your butt and your hands " +
+                                  "under your shoulder. Then lift your leg left and squeeze your butt as " +
+                                  "much as you can.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def donkey_kicks_right_mddialog(self):
+        my_dialog = MDDialog(title="Donkey Kicks Right",
+                             text="Start on all fours with your knees under your butt and your hands " +
+                                  "under your shoulder. Then lift your leg right and squeeze your butt as " +
+                                  "much as you can.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def lquad_stretch_wall_mddialog(self):
+        my_dialog = MDDialog(title="Left Quad Stretch With Wall",
+                             text="Stand with your right hand on the wall. Bend your left leg and grasp " +
+                                  " your ankle or toes to bring your left calf close to your left thigh.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def rquad_stretch_wall_mddialog(self):
+        my_dialog = MDDialog(title="Right Quad Stretch With Wall",
+                             text="Stand with your left hand on the wall. Bend your right leg and grasp " +
+                                  "your ankle or toes to bring your right calf close to your right thigh.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def knee_chest_stretchl_mddialog(self):
+        my_dialog = MDDialog(title="Knee To Chest Stretch Left",
+                             text="Lie on the floor with your legs extended. Lift your left knee up and " +
+                                  "grab it with both hands",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def knee_chest_stretchr_mddialog(self):
+        my_dialog = MDDialog(title="Knee To Chest Stretch Right",
+                             text="Lie on the floor with your legs extended. Lift your right knee up and " +
+                                  "grab it with both hands",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def wall_calf_raises_mddialog(self):
+        my_dialog = MDDialog(title="Wall Calf Raises",
+                             text="Stand straight with your hands on the wall and feet shoulder width apart. " +
+                                  "Lift your heels and stand on your toes. Then drop your heels down.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def sumo_squat_calf_mddialog(self):
+        my_dialog = MDDialog(title="Sumo Squat Calf Raises With Wall",
+                             text="Stand with your hands on the wall and your feet alittle wider than " +
+                                  "shoulder width apart. Lower your body until your thighs are parallel " +
+                                  "to the floor. Lift your heels up and down.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def calf_stretch_left_mddialog(self):
+        my_dialog = MDDialog(title="Calf Stretch Left",
+                             text="Stand one big step away in front of a wall. Step forward with your " +
+                                  "right foot and push the wall with your hands. please make sure your " +
+                                  "left leg is fully extended and you can feel your left calf stretching. " +
+                                  "hold this position for a few seconds.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def calf_stretch_right_mddialog(self):
+        my_dialog = MDDialog(title="Calf Stretch Left",
+                             text="Stand one big step away in front of a wall. Step forward with your " +
+                                  "left foot and push the wall with your hands. please make sure your " +
+                                  "right leg is fully extended and you can feel your right calf stretching. " +
+                                  "hold this position for a few seconds.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def crossover_crunch_mddialog(self):
+        my_dialog = MDDialog(title="Crossover Crunch",
+                             text="Lie on your back with your knees bent and your hands behind your eyes. " +
+                                  "Raise and twist your torso so your right elbow moves to meet your left knee",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def side_bridges_left_mddialog(self):
+        my_dialog = MDDialog(title="Side Bridges Left",
+                             text="Lie on your right side. put your right elbow directly under your " +
+                                  "shoulder and put your left hand on your waist. place your left leg " +
+                                  "on your right leg. Raise your hips upward, hold for 2-4 seconds, then " +
+                                  "go back to the start position.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def side_bridges_right_mddialog(self):
+        my_dialog = MDDialog(title="Side Bridges Right",
+                             text="Lie on your left side. put your left elbow directly under your " +
+                                  "shoulder and put your right hand on your waist. place your right leg " +
+                                  "on your left leg. Raise your hips upward, hold for 2-4 seconds, then " +
+                                  "go back to the start position.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def butt_bridge_mddialog(self):
+        my_dialog = MDDialog(title="Butt Bridge",
+                             text="Lie on your back with knees bent and feet flat on the floor. Put your " +
+                                  "arms flat atyour sides.\n\nThen lift your butt up and down.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def bicycle_crunches_mddialog(self):
+        my_dialog = MDDialog(title="Bicycle Crunches",
+                             text="lie on the floor with your hands behind your ears. raise your knees " +
+                                  "and close your right elbow toward your left knee, then close your left " +
+                                  "elbow toward your right knee. Repeat the exercise.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def vup_mddialog(self):
+        my_dialog = MDDialog(title="V-Up",
+                             text="Lie on your back with your arms and legs extended and your legs " +
+                                  "squeezed together.\n\nRaise your upper body ang legs, use your arms " +
+                                  "to touch your toes, then go back to the start position and repeat the exercise.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def pushup_rotation_mddialog(self):
+        my_dialog = MDDialog(title="Push-Up And Rotation",
+                             text="Start in the push up position. then go down for a push up and as you " +
+                                  "come up rotate your upper body and extend your right arm upwards. repeat " +
+                                  "the excercise with the other arms. Its a great exercise for the chest, " +
+                                  "shoulder, arms and core.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def side_plank_left_mddialog(self):
+        my_dialog = MDDialog(title="Side Plank Left",
+                             text="Lie on your left side with your forearm supporting your body. Hold your body in " +
+                                  "a straight line. This exercise targets the abdominal muscle and obliques.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def side_plank_right_mddialog(self):
+        my_dialog = MDDialog(title="Side Plank Right",
+                             text="Lie on your right side with your forearm supporting your body. Hold your body " +
+                                  "in a straight line. This excercise targets the abdominal muscle and obliques.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def floor_triceps_dips_mddialog(self):
+        my_dialog = MDDialog(title="Floor Triceps Dips",
+                             text="Sit on the floor with your knees bent and feet flat on the floor. Put your " +
+                                  "hands beneath your shoulders with your fingers pointing toward your hips." +
+                                  "\n\nLift your hips off the floor. Then bend and extend your elbows to lower " +
+                                  "and lift your hips. Repeat the exercise to strengthen your upper arms.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def military_pushups_mddialog(self):
+        my_dialog = MDDialog(title="Military Push Ups",
+                             text="Start in a push-up position with your hands directly under your shoulders " +
+                                  "and feet no more than 12 inches apart. Bend your elbows and lower your body " +
+                                  "until your upper arms are parallel to the floor.\n\nStay in this position " +
+                                  "for one second and then push your body back to the starting position and " +
+                                  "repeat the exercise. Please remember that your elbows should be close to " +
+                                  "your body during this exercise.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def alternating_hooks_mddialog(self):
+        my_dialog = MDDialog(title="Alternating Hooks",
+                             text="Stand with your feet shoulder-width apart, and place your dominant foot " +
+                                  "slightly for ward.\n\nSlightly bend your knees, clench your fists and " +
+                                  "bend your elbows at 90 degrees. Raise your right arm to shoulder height " +
+                                  "and keep your forearm parallel to the ground. Rotate your shoulders and hips " +
+                                  "and punch towards the left. Switch sides and repeat.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def skipping_without_rope_mddialog(self):
+        my_dialog = MDDialog(title="Skipping Without Rope",
+                             text="Place your arms at your sides and pretend to hold a skipping rope " +
+                                  "handle in each hand.\n\nJump and alternately land on the balls of your " +
+                                  "feet, rotating your wrists at the same time as if you were spinning a rope.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def burpees_mddialog(self):
+        my_dialog = MDDialog(title="Burpees",
+                             text="Stand with your feet shoulder width apart, then put your hands on the " +
+                                  "ground and kick your feet backward. Do a quick push-up and then jump up.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def arm_scissors_mddialog(self):
+        my_dialog = MDDialog(title="Arm Scissors",
+                             text="Stand upright with your feet shoulder width apart. Stretch your " +
+                                  "arms in front of you at shoulder height with one arm overlap the other " +
+                                  "in the shape of the 'x', and then spread them apart.\n\nSwitch arms, " +
+                                  "and repeat the exercise.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def fire_hydrant_left_mddialog(self):
+        my_dialog = MDDialog(title="Fire Hydrant Left",
+                             text="Start on all fours with your knees under your butt and your hands " +
+                                  "under your shoulder then lift your left leg to the side at a 90 degrees angle.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def fire_hydrant_right_mddialog(self):
+        my_dialog = MDDialog(title="Fire Hydrant Right",
+                             text="Start on all fours with your knees under your butt and your hands " +
+                                  "under your shoulder then lift your right leg to the side at a 90 degrees angle.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def lunges_mddialog(self):
+        my_dialog = MDDialog(title="Lunges",
+                             text="Stand with your feet shoulder width apart and your hands on your " +
+                                  "hips. ake a step forwards witth your right leg and lower your body until " +
+                                  "your right thigh. is parallel with the floor.\n\nThen return and switch " +
+                                  "to the other leg. this exercise strengthens the quadriceps, gluteus " +
+                                  "maximus and hamstrings.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def side_leg_circlel_mddialog(self):
+        my_dialog = MDDialog(title="Side Leg Circle Left",
+                             text="Lie on your right side with your head resting on your right hand. " +
+                                  "Then lift your left leg and rotate your foot in circles.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def side_leg_circler_mddialog(self):
+        my_dialog = MDDialog(title="Side Leg Circle Right",
+                             text="Lie on your left side with your head resting on your left hand. " +
+                                  "Then lift your right leg and rotate your foot in circles.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def sumo_squat_mddialog(self):
+        my_dialog = MDDialog(title="Sumo Squat",
+                             text="Stand with your feet 6-12 inches apart. Strech your arms in front " +
+                                  "of you. Lower your body until yout thighs are parallel to the floor. " +
+                                  "return to the starting position and repeat the excercise.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def reverse_flutter_kicks_mddialog(self):
+        my_dialog = MDDialog(title="Reverse Flutter Kicks",
+                             text="Lie face down on a bench, place your butt on the edge of the bench " +
+                                  "and hold on to the sides.\n\nThen lift your legs unil they are level " +
+                                  "with your upper body. Lift one leg higher than the other, then switch " +
+                                  "to the other leg and repeat.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def wall_sit_mddialog(self):
+        my_dialog = MDDialog(title="Wall Sit",
+                             text="Start your back angaints the wall, then slide down until your knees " +
+                                  "are at a 90 degree angle. Keep your back against the wall with your " +
+                                  "hands and arms away from your legs. Hold the position.\n\nThe excercise " +
+                                  "is to strengthen the quadriceps muscles.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def calf_raise_splayed_mddialog(self):
+        my_dialog = MDDialog(title="Calf Raise With Splayed Foot",
+                             text="Stand with your feet shoulder width apart. Put your hands on the wall " +
+                                  "to maintain balance. Twist your ankles to make your toes point outwards, " +
+                                  "then lift your heels up and down.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def leg_calf_hopl_mddialog(self):
+        my_dialog = MDDialog(title="Single Leg Calf Hop Left",
+                             text="Stand straight with your right leg lifted. Then hop up and down on your left foot.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def leg_calf_hopr_mddialog(self):
+        my_dialog = MDDialog(title="Single Leg Calf Hop Right",
+                             text="Stand straight with your left leg lifted. Then hop up and down on your right foot.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def glute_kick_backl_mddialog(self):
+        my_dialog = MDDialog(title="Glute Kick Back Left",
+                             text="Start on all fours with your knees under your butt and your hands directly " +
+                                  "under your shoulder.\n\nThen kick left leg back until it is parallel with " +
+                                  "the ground. Switch to the other side after several steps.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def glute_kick_backr_mddialog(self):
+        my_dialog = MDDialog(title="Glute Kick Back Right",
+                             text="Start on all fours with your knees under your butt and your hands directly " +
+                                  "under your shoulder.\n\nThen kick right leg back until it is parallel with " +
+                                  "the ground. Switch to the other side after several steps.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def flying_butterfly_stretch_mddialog(self):
+        my_dialog = MDDialog(title="Flying Butterfly Stretch",
+                             text="Lie on the floor with your feet together. Open your knees to the sides. " +
+                                  "Hold this position.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def leaning_stretcher_raises_mddialog(self):
+        my_dialog = MDDialog(title="Leaning Stretcher Raises",
+                             text="Stand a big step away from the wall. Put your hand on the wall and " +
+                                  "lean on it. Lift your heels as high as you can and then lower them " +
+                                  "down. Repeat the exercise.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def wrslcr_left_mddialog(self):
+        my_dialog = MDDialog(title="Wall Resisting Single Leg Calf Raise Left",
+                             text="Stand a big step away from the wall. Put your left foot on your right " +
+                                  "ankle. Put your hands on the wall and lean on it.\n\nLift your right heel " +
+                                  "as high as you can and then lower it. Repeat the exercise.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def wrslcr_right_mddialog(self):
+        my_dialog = MDDialog(title="Wall Resisting Single Leg Calf Raise Right",
+                             text="Stand a big step away from the wall. Put your right foot on your right " +
+                                  "ankle. Put your hands on the wall and lean on it.\n\nLift your left heel " +
+                                  "as high as you can and then lower it. Repeat the exercise.",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+
+    def help_mddialog(self):
+        my_dialog = MDDialog(title="10 second rest  for every exercise ",
+                             text="You need to do this exercises for 30 days to see results",
+                             size_hint=[.6, .5], auto_dismiss=False, events_callback=self.my_callback,
+                             text_button_ok="close")
+        my_dialog.open()
+    def my_callback(self, text_of_selection, popup_widget):
+        print(text_of_selection)
+        print(popup_widget)
+
+
+MainApp().run()
